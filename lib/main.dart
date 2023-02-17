@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/screens/Details.dart';
 import 'package:weather_app/screens/cities.dart';
 
-
 void main() {
-  runApp(const MaterialApp(
-    home: MyApp()
+  runApp(MaterialApp(
+    initialRoute: '/',
+    routes: {
+      '/': (context) => const CitiesScreen(),
+      '/details': (context) => const Details(),
+    },
   ));
 }
-
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
